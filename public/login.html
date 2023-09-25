@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evil pirate - Login</title>
+    <!--icon-->
+    <link rel="icon" type="image/x-icon" href="icons/pirate.ico">
+    <!-- css-->
+    <link rel="stylesheet" href="styles/login.css">
+    <!--bootstrap-CSS-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!--google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Reem+Kufi+Fun:wght@600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <!-- Centered Bootstrap Card -->
+                <div class="card centered-card loginCard">
+                    <div class="card-body">
+                        <form action="/login" method="post">
+                            <!--login TITLE-->
+                        <h5 class="card-title loginTitle">LOGIN</h5>
+                        <!--username INPUT-->
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label ">Email address</label>
+                            <input type="text" class="form-control loginInput" autocomplete="off" id="username" name="username" placeholder="username">
+                          </div>
+                          <!--password INPUT-->
+                          <div class="mb-3">
+                            <label for="inputPassword5" class="form-label ">Password</label>
+                            <input type="password" id="password" autocomplete="off" name="password" class="form-control loginInput" placeholder="password" aria-describedby="passwordHelpBlock">
+                          </div>
+                          <!--submit BUTTOn-->
+                          <button type="submit" class="btn btn-success loginButton">LOGIN</button>
+                        
+
+                        </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!--bootstrap JS-->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

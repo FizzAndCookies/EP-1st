@@ -1,0 +1,45 @@
+body{
+    background-image: url("../images/wall.png") !important;
+    background-size: auto !important;
+    background-repeat: no-repeat !important;
+}
+
+.loginCard {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0d1117 !important;
+    color:#e6edf3 !important;
+}
+
+.loginTitle{
+    text-align: center;
+    font-size: 30px !important;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.loginInput{
+    background-color: #161b22 !important;
+    color: #e6edf3 !important;
+    border: none !important;
+}
+
+.loginInput::placeholder{
+    color: #65696c !important;
+}
+
+.loginButton{
+    width: 100% !important;
+}
+
+
+@media (min-width: 1000px) {
+    .loginCard{
+        width: 60% !important;
+    }
+    body{
+        background-size: 100% !important;
+        background-repeat: no-repeat !important;
+    }
+}

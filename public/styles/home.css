@@ -1,0 +1,323 @@
+body{
+    background-color: #2d333b !important;
+    padding: 5px !important;
+}
+
+/*top menu card*/
+.topMenuCard{
+    background-color: #1c2128 !important;
+    border:2px solid #3c434d !important; 
+    margin-bottom: 10px !important;
+    width: 100% !important;
+    color: #ffffff !important;
+    padding: 6px !important;
+}
+
+
+.settings{
+    text-align: end !important;
+    cursor: pointer;
+}
+
+
+/*selector*/
+.targetselectrorCard{
+    background-color: #1c2128 !important;
+    border:2px solid #3c434d !important;
+    color: #ffffff !important;
+}
+
+.targetTitle{
+    color: white !important;
+    margin-bottom:10px !important;
+}
+
+.refreshButton{
+    position: absolute;
+    right: 20px;
+    color: #ffffff !important;
+    cursor: pointer;
+}
+
+.selector{
+    background-color: #373e47 !important;
+    color: white !important;
+    border: 2px solid #464e58 !important;
+    margin-bottom: 10px !important;
+}
+
+.selector:focus{
+    background-color: #373e47 !important;
+    color: white !important;
+    border: 2px solid #464e58;
+}
+
+.selctedClient{
+    
+    margin-top: 30px !important;
+    color: white !important;
+}
+
+.selectedUserText{
+    color: #6a7681;
+}
+
+.ping{
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+#pingSpinner{
+    display: none;
+    margin-left: 5px;
+    margin-top: 2px;
+} 
+/*more options*/
+.detailsButton{
+    position: absolute;
+    right: 60px;
+    cursor: pointer;
+    color: yellow !important;
+}
+
+.targetDetails{
+    background-color: #373e47 !important;
+    color: white !important;
+    border: 2px solid #464e58 !important;
+    max-height: 300px !important;
+    overflow-y: auto !important;
+}
+
+/* connection alive modal*/
+.pingreplyModal{
+    background-color: #1c2128 !important;
+    border:2px solid #3c434d !important;
+    color: #ffffff !important;
+}
+.pingStatus{
+    text-align: center !important;
+}
+
+.pingStatusModalCloseButton{
+    width: 100% !important;
+}
+
+
+/*new connection modal*/
+.newUserConnectionModal{
+    background-color: #1c2128 !important;
+    border:2px solid #3c434d !important;
+    color: #ffffff !important;
+}
+
+.yayImage{
+    width: 100px;
+    height: 140px;
+}
+.newConnectionHeading{
+    text-align: center !important;
+}
+
+.newUserConnectionSubCard{
+    width: 100% !important;
+    background-color: #1c2128 !important;
+    border:2px solid #3c434d !important;
+    color: #ffffff !important;
+}
+.newUserConnectionOS{
+    color: #ffffff !important;
+}
+
+.setNicknameMenu{
+    margin-top: 15px !important;
+}
+
+.nicknameInput{
+    background-color: #1c2128 !important;
+    border:2px solid #3c434d !important;
+    
+    color: whitesmoke !important;
+}
+
+.nicknameInput::placeholder{
+    color: white !important;
+}
+
+/*quick option selector*/
+
+.quickoptionCard{
+    background-color: #1c2128 !important;
+    border:2px solid #3c434d !important;
+    color: #ffffff !important;
+    margin-top: 10px !important;
+}
+
+.searchButton{
+    text-align: end !important;
+    cursor: pointer;
+    width: 100%;
+    
+    
+}
+
+.quickOptionSelector{
+    background-color: #373e47 !important;
+    color: white !important;
+    border: 2px solid #464e58 !important;
+    margin-bottom: 10px !important;
+}
+
+.quickOptionSelector:focus{
+    background-color: #373e47 !important;
+    color: white !important;
+    border: 2px solid #464e58;
+}
+
+
+/* output */
+.output{
+    margin-top:20px !important;
+    height: 26vh !important;
+    background-color: #1c2128 !important;
+    border:2px solid #3c434d !important;
+    color: #ffffff !important;
+    border: none !important;
+    resize: none !important;
+}
+.output:focus{
+    background-color: #1c2128 !important;
+    border:2px solid #3c434d !important;
+    color: #ffffff !important;
+}
+.clearOutputButton{
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    cursor: pointer;
+}
+
+/*input shell*/
+.shellInputMenu{
+    margin-top: 15px !important;
+}
+
+.shellInput{
+    background-color: #1c2128 !important;
+    border:2px solid #3c434d !important;
+    
+    color: whitesmoke !important;
+}
+
+.shellInput::placeholder{
+    color: white !important;
+}
+
+.uploadFileButton{
+    color: #6c757d;
+    position: relative;
+    top: 4px;
+    font-size: 30px !important;
+    cursor: pointer;
+    
+}
+
+.inputclear{
+    color: #6c757d;
+    position: relative;
+    top: 4px;
+    font-size: 30px !important;
+    cursor: pointer;
+}
+
+.sendButton{
+    border: #1c2128;
+    background-color: #2d333b;
+    color: #6c757d;
+    font-size: 35px !important;
+}
+/*settings modal*/
+.settingsModalContent{
+    background-color: #1c2128 !important;
+    border:2px solid #3c434d !important;
+    padding: 20px;
+    color: whitesmoke !important;
+}
+.settingsTitle{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.toggleButtonNotification{
+    position: absolute;
+    right: 20px !important;
+    font-size: 28px !important;
+    margin-left: 20px;
+    color: yellowgreen ;
+}
+.toggleButtonSound{
+    position: absolute;
+    right: 20px !important;
+    font-size: 28px !important;
+    margin-left: 20px;
+    color: yellowgreen ;
+}
+
+.logButton{
+    margin-top: 20px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+.logCollapseBody{
+    margin-top: 20px !important;
+    background-color: #1c2128 !important;
+    border:2px solid #3c434d !important;
+    color: whitesmoke !important;
+    max-height: 300px !important;
+    overflow: auto !important;
+}
+.logContent{
+    font-size: 12px !important;
+}
+
+/*image capture modal*/
+.capturedImageVIewModalBody{
+    background-color: #1c2128 !important;
+    border:2px solid #3c434d !important;
+    color: whitesmoke !important;
+}
+.capturedImage{
+    width: 100%;
+    height: 90%;
+    margin-bottom: 20px !important;
+    margin-top: 20px !important;
+}
+
+
+
+/*scrollbar*/
+ ::-webkit-scrollbar {
+    width: 6px; /* Width of vertical scrollbar */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #6c757d; /* Color of the scrollbar thumb */
+    border-radius: 0.2px; /* Rounded corners */
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #1c2128; /* Color of the scrollbar track */
+  }
+
+  /* pc screen*/
+  @media (min-width: 1000px) {
+  body{
+    padding-left: 30% !important;
+    padding-right: 30% !important;
+    padding-top: 40px !important;
+  }
+  .clearOutputButton{
+    position: absolute !important;
+    right: 30% !important;
+  }
+  }
